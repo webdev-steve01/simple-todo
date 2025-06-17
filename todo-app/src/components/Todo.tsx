@@ -48,11 +48,6 @@ const Card: React.FC<CardProps> = ({
     marginBottom: "5px",
     color: isStrikethrough ? "#888" : "#333",
   };
-  const descStyle: React.CSSProperties = {
-    fontSize: "0.9em",
-    color: isStrikethrough ? "#aaa" : "#555",
-    marginBottom: "5px",
-  };
   const dateStyle: React.CSSProperties = {
     fontSize: "0.8em",
     color: "#888",
@@ -274,6 +269,7 @@ function Todo() {
       setError(null);
       setAlertMessage(null);
       setIsSuccess(null);
+      console.log(desc);
 
       try {
         const storedTodos = localStorage.getItem("todos");
